@@ -35,13 +35,13 @@ export class Navbar extends Component {
               </li>
               <li className="nav-item active">
               </li>
-              <li className="nav-item active"><Link to="/business" className="nav-link">business</Link></li> 
-              <li className="nav-item active"><Link to="/entertainment" className="nav-link">entertainment</Link></li>
-              <li className="nav-item active"><Link to="/" className="nav-link">general</Link></li>
-              <li className="nav-item active"><Link to="/health" className="nav-link">health</Link></li>
-              <li className="nav-item active"><Link to="/science" className="nav-link">science</Link></li>
-              <li className="nav-item active"><Link to="/sports" className="nav-link">sports</Link></li>
-              <li className="nav-item active"><Link to="/technology" className="nav-link">technology</Link></li>
+              <li className="nav-item active"><Link to="/business" className="nav-link">Business</Link></li> 
+              <li className="nav-item active"><Link to="/entertainment" className="nav-link">Entertainment</Link></li>
+              <li className="nav-item active"><Link to="/" className="nav-link">General</Link></li>
+              <li className="nav-item active"><Link to="/health" className="nav-link">Health</Link></li>
+              <li className="nav-item active"><Link to="/science" className="nav-link">Science</Link></li>
+              <li className="nav-item active"><Link to="/sports" className="nav-link">Sports</Link></li>
+              <li className="nav-item active"><Link to="/technology" className="nav-link">Technology</Link></li>
                </ul>
           </div>
         </nav>

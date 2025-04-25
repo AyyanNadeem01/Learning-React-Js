@@ -7,7 +7,12 @@ export class Newsitem extends Component {
       <div>
         <div className="card position-relative" style={{ width: "18rem" }}>
           <div className="position-relative">
-            <img src={imageUrl} className="card-img-top" alt="..." />
+            <img
+              src={imageUrl}
+              className="card-img-top"
+              alt="..."
+              style={{ height: '180px', objectFit: 'cover', width: '100%' }}
+            />
             
             {/* Badge inside image corner */}
             <span
@@ -18,7 +23,7 @@ export class Newsitem extends Component {
             </span>
           </div>
 
-          <div className="card-body">
+          <div className="card-body" style={{ height: '250px' }}>
             <h5 className="card-title">{title.slice(0, 45)}</h5>
             <p className="card-text">{description.slice(0, 88)}</p>
             <p className='card-text'>By {author ? author : "Unknown"} on {new Date(publishedAt).toGMTString()}</p>

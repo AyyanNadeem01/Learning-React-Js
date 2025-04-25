@@ -16,8 +16,8 @@ export class News extends Component {
         pagesize: proptypes.number,
         category: proptypes.string,
     }
-    constructor() {
-        super();
+    constructor(props) {
+        super(props);
         console.log('Hello I am a constructor from News component');
         this.state = {
             articles: [],
@@ -25,76 +25,50 @@ export class News extends Component {
             page: 1,
             totalResults: 0
         };
+        document.title = `${this.props.categoryjj} - NewsMonkey`;
     }
 
-    // Fetching the data on component mount
-    async componentDidMount() {
+    async updateNews(pageNo) {
+        const url = `https://newsapi.org/v2/top-headlines?country=${this.props.country}&category=${this.props.category}&apikey=715d88aef10f41048db9ab80c2f4588d&page=${this.state.page}&pageSize=${this.props.pagesize}`;
         this.setState({ loading: true });
-        let url = `https://newsapi.org/v2/top-headlines?country=${this.props.country}&category=${this.props.category}&apikey=715d88aef10f41048db9ab80c2f4588d&page=1&pageSize=${this.props.pagesize}`;
         let data = await fetch(url);
         let parsedData = await data.json();
-
-        // Debugging logs
-        console.log("Total Results: ", parsedData.totalResults);
-        console.log("Fetched Articles on this page: ", parsedData.articles.length);
-        console.log("Filtered Articles on this page: ", parsedData.articles.filter(article => article.title && article.description && article.urlToImage && article.publishedAt &&article.author).length && parsedData.articles.filter(article => article.title && article.description && article.urlToImage && article.publishedAt &&article.author).length);
-        console.log("Parsed Data: ", parsedData);
-
         this.setState({
             articles: parsedData.articles.filter(article => article.title && article.description && article.urlToImage && article.publishedAt && article.author),
             totalResults: parsedData.totalResults,
             loading: false
         });
     }
+    // Fetching the data on component mount
+    async componentDidMount() {
+        this.setState({ loading: true });
+        this.updateNews(this.state.page);
+    }
 
-    // Handling the Previous button click to load the previous page
     handlePrevClick = async () => {
-        console.log("Previous");
-        if(this.state.page>1){
-        let url = `https://newsapi.org/v2/top-headlines?country=${this.props.country}&category=${this.props.category}&apikey=715d88aef10f41048db9ab80c2f4588d&page=${this.state.page - 1}&pageSize=${this.props.pagesize}`;
-        this.setState({ loading: true });
-        let data = await fetch(url);
-        let parsedData = await data.json();
-
-        // Debugging logs
-        console.log("Total Results: ", parsedData.totalResults);
-        console.log("Fetched Articles on this page: ", parsedData.articles.length);
-        console.log("Filtered Articles on this page: ", parsedData.articles.filter(article => article.title && article.description && article.urlToImage && article.publishedAt && article.author).length);
-
-        this.setState({
-            articles: parsedData.articles.filter(article => article.title && article.description && article.urlToImage && article.publishedAt && article.author),
-            page: this.state.page - 1,
-            loading: false,
-        });
+        this.setState(
+            { page: this.state.page - 1 },
+            () => {
+                this.updateNews(this.state.page);
+            }
+        );
     }
-    }
-
+    
     // Handling the Next button click to load the next page
-    handleNextClick = async () => {
-        console.log("Next");
-        if (!(this.state.page + 1 > Math.ceil(this.state.totalResults / this.props.pagesize))) {
-        let url = `https://newsapi.org/v2/top-headlines?country=${this.props.country}&category=${this.props.category}&apikey=715d88aef10f41048db9ab80c2f4588d&page=${this.state.page + 1}&pageSize=${this.props.pagesize}`;
-        this.setState({ loading: true });
-        let data = await fetch(url);
-        let parsedData = await data.json();
-
-        // Debugging logs
-        console.log("Total Results: ", parsedData.totalResults);
-        console.log("Fetched Articles on this page: ", parsedData.articles.length);
-        console.log("Filtered Articles on this page: ", parsedData.articles.filter(article => article.title && article.description && article.urlToImage && article.publishedAt).length);
-
-        this.setState({
-            articles: parsedData.articles.filter(article => article.title && article.description && article.urlToImage && article.publishedAt ),
-            page: this.state.page + 1,
-            loading: false
-        });
+    handleNextClick = () => {
+        this.setState(
+            prevState => ({ page: prevState.page + 1 }),
+            () => {
+                this.updateNews(this.state.page);
+            }
+        );
     }
-}
+    
     render() {
         return (
             <div className="container my-3">
                 {this.state.loading &&<Spinner />}
-                <h2 className="text-center">Top Headlines</h2>
+                <h2 className="text-center">Top Headlines - {this.props.category}</h2>
 
                 <div className="row">
                     {!this.state.loading &&this.state.articles.map((element, index) => {
