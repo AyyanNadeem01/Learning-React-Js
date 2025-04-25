@@ -1,0 +1,103 @@
+/* Fancy & Modern Styling */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&display=swap');
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  background: linear-gradient(135deg, #f8f9fa, #e3f2fd);
+  color: #333;
+  transition: all 0.3s ease-in-out;
+  padding: 5px;
+}
+
+.container {
+  max-width: 900px;
+  margin: auto;
+  padding: 20px;
+}
+
+/* Card Styling */
+.text-card {
+  background: rgba(255, 255, 255, 0.9);
+  padding: 25px;
+  border-radius: 15px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+  backdrop-filter: blur(10px);
+  margin-bottom: 20px;
+  transition: all 0.3s ease;
+}
+
+.text-card:hover {
+  transform: translateY(-5px);
+}
+
+/* Textarea Styling */
+textarea {
+  width: 100%;
+  border-radius: 12px;
+  border: 2px solid #007bff;
+  padding: 12px;
+  font-size: 18px;
+  transition: all 0.3s;
+  background: rgba(255, 255, 255, 0.8);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+textarea:focus {
+  border-color: #0056b3;
+  outline: none;
+  box-shadow: 0 0 12px rgba(0, 123, 255, 0.4);
+}
+
+/* Button Styling */
+.btn {
+  font-size: 18px;
+  font-weight: 600;
+  border-radius: 10px;
+  padding: 12px 20px;
+  margin-top: 10px;
+  transition: 0.3s ease-in-out;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
+}
+
+.btn-primary {
+  background: linear-gradient(45deg, #007bff, #6610f2);
+  border: none;
+  color: white;
+}
+
+.btn-primary:hover {
+  background: linear-gradient(45deg, #0056b3, #520dc2);
+  transform: scale(1.05);
+}
+
+/* Dark Mode Styling */
+.dark-mode {
+  background: linear-gradient(135deg, #121212, #1e1e1e);
+  color: white;
+}
+
+.dark-mode .text-card {
+  background: rgba(40, 40, 40, 0.9);
+  color: white;
+  box-shadow: 0 10px 20px rgba(255, 255, 255, 0.1);
+}
+
+.dark-mode textarea {
+  background: rgba(50, 50, 50, 0.8);
+  color: white;
+  border: 2px solid #17a2b8;
+}
+
+.dark-mode textarea:focus {
+  border-color: #138496;
+  box-shadow: 0 0 12px rgba(23, 162, 184, 0.4);
+}
+
+.dark-mode .btn-primary {
+  background: linear-gradient(45deg, #17a2b8, #20c997);
+}
+
+.dark-mode .btn-primary:hover {
+  background: linear-gradient(45deg, #138496, #1ca78d);
+  transform: scale(1.05);
+}

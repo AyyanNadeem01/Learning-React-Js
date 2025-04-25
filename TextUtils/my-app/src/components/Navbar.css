@@ -1,0 +1,68 @@
+.navbar {
+    background: linear-gradient(135deg, #1e3c72, #2a5298);
+    padding: 15px 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Navbar Brand */
+.navbar-brand {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #fff !important;
+    transition: color 0.3s ease-in-out;
+}
+
+.navbar-brand:hover {
+    color: #ffcc00 !important;
+}
+
+/* Navbar Links */
+.navbar-nav .nav-item .nav-link {
+    font-size: 1.2rem;
+    color: #ffffff !important;
+    margin-right: 20px;
+    transition: all 0.3s ease-in-out;
+}
+
+.navbar-nav .nav-item .nav-link:hover {
+    color: #ffcc00 !important;
+    transform: scale(1.1);
+}
+
+/* Search Box */
+.form-control {
+    border: 2px solid #ffcc00;
+    border-radius: 25px;
+    padding: 8px 15px;
+    transition: all 0.3s ease-in-out;
+}
+
+.form-control:focus {
+    border-color: #ffffff;
+    box-shadow: 0 0 8px rgba(255, 204, 0, 0.8);
+}
+
+/* Search Button */
+.btn-outline-success {
+    color: #ffcc00;
+    border-color: #ffcc00;
+    border-radius: 25px;
+    transition: all 0.3s ease-in-out;
+}
+
+.btn-outline-success:hover {
+    background-color: #ffcc00;
+    color: #1e3c72;
+    transform: scale(1.1);
+}
+
+/* Navbar Toggler */
+.navbar-toggler {
+    border: none;
+    outline: none;
+}
+
+.navbar-toggler-icon {
+    background-color: white;
+    border-radius: 5px;
+}

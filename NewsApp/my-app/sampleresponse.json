@@ -1,0 +1,45 @@
+{
+    "status": "ok",
+    "totalResults": 3,
+    "articles": [
+      {
+        "source": {
+          "id": "news24",
+          "name": "News24"
+        },
+        "author": "Lynn Butler",
+        "title": "No Tests for 2025 festive season as Cricket SA confirms Proteas' home schedule",
+        "description": "Cricket South Africa confirmed the Proteas' home schedule for the 2025/26 international calendar, with no Tests in the country over the festive season.",
+        "url": "https://www.news24.com/sport/cricket/proteas/no-tests-for-2025-festive-season-as-cricket-sa-confirms-proteas-home-schedule-20250320",
+        "urlToImage": "https://cdn.24.co.za/files/Cms/General/d/12498/1073543e4c764faba7fbeff7cf899a24.jpg",
+        "publishedAt": "2025-03-20T10:46:08",
+        "content": "\u003Cul\u003E\u003Cli\u003ECricket South Africa on Thursday confirmed the home schedule for the Proteas men and women for the 2025/26 season.\u003C/li\u003E\u003Cli\u003EThe Proteas men's team will face West Indies in a five-match T20I se… [+5045 chars]"
+      },
+      {
+        "source": {
+          "id": "espn-cric-info",
+          "name": "ESPN Cric Info"
+        },
+        "author": null,
+        "title": "PCB hands Umar Akmal three-year ban from all cricket | ESPNcricinfo.com",
+        "description": "Penalty after the batsman pleaded guilty to not reporting corrupt approaches | ESPNcricinfo.com",
+        "url": "http://www.espncricinfo.com/story/_/id/29103103/pcb-hands-umar-akmal-three-year-ban-all-cricket",
+        "urlToImage": "https://a4.espncdn.com/combiner/i?img=%2Fi%2Fcricket%2Fcricinfo%2F1099495_800x450.jpg",
+        "publishedAt": "2020-04-27T11:41:47Z",
+        "content": "Umar Akmal's troubled cricket career has hit its biggest roadblock yet, with the PCB handing him a ban from all representative cricket for three years after he pleaded guilty of failing to report det… [+1506 chars]"
+      },
+      {
+        "source": {
+          "id": "espn-cric-info",
+          "name": "ESPN Cric Info"
+        },
+        "author": null,
+        "title": "What we learned from watching the 1992 World Cup final in full again | ESPNcricinfo.com",
+        "description": "Wides, lbw calls, swing - plenty of things were different in white-ball cricket back then | ESPNcricinfo.com",
+        "url": "http://www.espncricinfo.com/story/_/id/28970907/learned-watching-1992-world-cup-final-full-again",
+        "urlToImage": "https://a4.espncdn.com/combiner/i?img=%2Fi%2Fcricket%2Fcricinfo%2F1219926_1296x729.jpg",
+        "publishedAt": "2020-03-30T15:26:05Z",
+        "content": "Last week, we at ESPNcricinfo did something we have been thinking of doing for eight years now: pretend-live ball-by-ball commentary for a classic cricket match. We knew the result, yes, but we tried… [+6823 chars]"
+      }
+    ]
+  }
